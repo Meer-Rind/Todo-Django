@@ -25,9 +25,9 @@ Delete Task Page: Provides an option to delete tasks.![Screenshot from 2025-03-2
 Admin Panel
 The admin panel can be accessed using the following credentials:
 
-Username: Meer
+****Username: Meer**
 
-Password: 797122
+**Password: 797122****
 
 If you want to change the admin username or password, follow the instructions below.
 
@@ -37,7 +37,7 @@ Screenshots of all the pages are available in the GitHub repository's README fil
 How to Run the Project Locally
 Follow these steps to run the Todo application on your local machine:
 
-Step 1: Clone the Repository
+**Step 1: Clone the Repository**
 Clone the repository to your local machine using the following command:
 
 bash
@@ -57,28 +57,24 @@ Copy
 python -m venv venv
 Activate the virtual environment:
 
-On macOS/Linux:
+**On macOS/Linux:**
 
-bash
-Copy
-source venv/bin/activate
-On Windows:
 
-bash
-Copy
-venv\Scripts\activate
+**source venv/bin/activate**
+**On Windows:**
+
+
+**venv\Scripts\activate**
 Step 4: Install Dependencies
 Install the required dependencies using the following command:
 
-bash
-Copy
-pip install -r requirements.txt
-Step 5: Run Migrations
+
+**pip install -r requirements.txt**
+**Step 5: Run Migrations**
 Apply the database migrations to set up the SQLite database:
 
-bash
-Copy
-python manage.py migrate
+
+**python manage.py migrate**
 Step 6: Create a Superuser (Admin)
 Create a superuser to access the Django admin panel:
 
@@ -102,19 +98,18 @@ If you want to change the username or password of the admin account, follow thes
 Access the Django Shell:
 Run the following command to open the Django shell:
 
-bash
-Copy
-python manage.py shell
+
+**python manage.py shell**
 Update Admin Credentials:
 Use the following Python commands to change the username and password:
 
 python
-Copy
-from django.contrib.auth.models import User
+
+**from django.contrib.auth.models import User
 user = User.objects.get(username='Meer')  # Replace 'Meer' with the current username
 user.username = 'new_username'  # Set a new username
 user.set_password('new_password')  # Set a new password
-user.save()
-Exit the Shell:
-Type exit() and press Enter to exit the Django shell.
+user.save()**
+**Exit the Shell:
+Type** exit() and press Enter to exit the Django shell.**
 
