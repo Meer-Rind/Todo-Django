@@ -1,0 +1,70 @@
+{% extends "Todos/base.html" %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg p-5 mt-5 text-center">
+                <h1 class="display-4 mb-4">Welcome to the To-Do App</h1>
+                <p class="lead mb-4">Manage your tasks efficiently and effectively.</p>
+                <hr class="my-4">
+                <p class="mb-4">Get started by registering or logging in.</p>
+                <div class="d-grid gap-3 d-md-block">
+                    <a class="btn btn-custom btn-lg" href="{% url 'register' %}" role="button">Register</a>
+                    <a class="btn btn-success btn-lg" href="{% url 'login' %}" role="button">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        border: none;
+        border-radius: 15px;
+        background: #fff;
+    }
+
+    .btn-custom {
+        background: linear-gradient(90deg, #6a11cb, #2575fc);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .btn-success:hover {
+        background-color: #218838;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .display-4 {
+        font-weight: 600;
+        color: #6a11cb;
+    }
+
+    .lead {
+        font-size: 1.5rem;
+        color: #6c757d;
+    }
+</style>
+{% endblock %}
